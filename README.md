@@ -10,3 +10,4 @@ Simple design version for Loja Integrada's platform. Mostly based in a sober min
 ![image](https://user-images.githubusercontent.com/62719629/133518748-b52afc90-3f2b-4840-beca-77a55296db33.png)
 ![image](https://user-images.githubusercontent.com/62719629/133518787-7063d334-ab37-4b5d-bb31-0d9fe041b647.png)
 
+PS: Header html is palced inside head tag. This caused a bug in the Buy button`s function in product's page. Therefore, the last function in the script tag works as a fix for that.

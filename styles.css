@@ -1,0 +1,574 @@
+.barra-inicial {
+    background: #000;
+}
+
+body,
+#cabecalho,
+#corpo,
+#rodape {
+    background: #fff;
+}
+
+#cabecalho,
+#corpo,
+.conteiner-principal > *,
+.conteiner {
+    border: none;
+    box-shadow: none !important;
+}
+
+/* a partir daqui, influencia no site */
+body {
+	font-size: 14px;
+}
+
+i {
+    border-radius: 0.25rem;
+}
+
+input:focus {
+    outline: none;
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    border-color: #000;
+}
+
+.botao {
+	border-radius: .5rem;
+}
+
+.busca {
+    background-color: #fff;
+    border: none;
+}
+
+.busca input {
+    border: none;
+    border-bottom: solid 2px #000;
+    border-radius: 0px;
+    padding: 5px 10px;
+    box-shadow: none;
+    -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+    width: 85%;
+}
+
+.busca input:focus {
+    outline:none;
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    border-bottom: solid 3px #7A1781;
+}
+
+#barraTopo .busca input {
+    width: 75%;
+}
+
+#barraTopo .busca input:focus {
+    outline: none;
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    border-color: #000;
+}
+
+.nivel-um {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.borda-principal {
+    border: none;
+    box-shadow: none;
+}
+
+.nivel-um li {
+    border: none !important;
+}
+
+.nivel-um li:hover {
+    border: none;
+    border-bottom: 2px solid #7A1781 !important;
+    color: #7A1781;
+    margin-top: 0 !important;
+}
+
+.nivel-um li.active {
+    border-bottom: 2px solid #7A1781 !important;
+}
+
+/* produtos */
+#listagemProdutos ul li {
+    border: none;
+}
+
+.listagem-item {
+    border-radius: 4px;
+}
+
+.listagem-item:hover {
+    /* border-bottom: 2px solid #7A1781; */
+    /* transition de 0.1s já vindo do lojaintegrada */
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 20px;
+}
+
+.indisponivel:hover {
+    border: none !important;
+}
+
+/* botão ver mais dos produtos listados */
+.listagem-item .acoes-produto {
+    position: relative;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    background:#fff;
+    opacity: 0;
+    border: none;
+}
+
+.listagem-item .acoes-produto a {
+    background: none;
+    border: none;
+    color: #7A1781;
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* tirando fundo e bordas dos botões de ver mais */
+.acoes-produto .botao.botao-comprar {
+	background: none;
+}
+
+.acoes-produto .botao.botao-comprar:hover {
+	background: none !important;
+}
+
+.comprar a.botao-comprar {
+    background: #7A1781 !important;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.comprar a.botao-comprar:hover {
+    background: #7A1781 !important;
+    opacity: 0.8;
+}
+
+.info-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preco-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nome-produto {
+    font-size: 1.2rem !important;
+    margin-top: 0.5rem;
+}
+
+
+/* específicac para pag do produto */
+.aproveite-tambem .listagem-linha ul li {
+    border: none;
+}
+
+.aproveite-item .listagem-linha ul li div {
+	margin-left: 0;
+}
+
+
+
+
+
+
+/* alterações que ainda não estão no site */
+
+/* vidya 3 */
+
+/* HEADER NOVO */
+.navigationBar {
+    display: block;
+}
+
+.navigationBar.row  {
+    display: flex;
+    align-items: center;
+}
+
+.headerMenu {
+    display: flex !important;
+    height: 12rem;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: red; */
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+
+.headerMenu > * {
+    margin-left: 2.5rem;
+}
+
+.busca {
+    margin-top: 1.5rem;
+    display: flex;
+
+    margin-top: 2.5rem;
+}
+
+.busca input {
+    display: none;
+    width: 20rem;
+    margin-right: 1.2rem;
+    opacity: 0;
+}
+
+.busca input.inputActive {
+    display: block;
+    opacity: 1;
+
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.busca > a:hover {
+    cursor: pointer;
+}
+
+.headerMenuTitle {
+    display: none;
+}
+
+.headerMenuSvg {
+    display: block;
+
+    margin-right: 1rem;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+.shopCartSvg:hover {
+    cursor: pointer;
+}
+
+.userSvg:hover {
+    cursor: pointer;
+}
+
+.glyphicon {
+    font-size: 25px;
+    color: #111;
+}
+
+
+
+
+
+
+
+
+/* sidenav - ainda não no site */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #111;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    /* color: #818181; */
+    color: #111;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav h3 {
+    font-weight: 500;
+}
+
+.sidenav h3:hover {
+    color: #7A1781;
+}
+
+.sidenav a:hover,
+.sidenav a:focus {
+    color: #7A1781;
+    text-decoration: none;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sideNavButton {
+    position: relative;
+    left: 2rem;
+    top: 8rem;
+    display: none;
+
+    color: #000;
+}
+
+/* styles do dropdown do sidenav */
+
+
+.dropdownTitle {
+    cursor: pointer;
+    position: relative;
+    left: 12px;
+}
+
+.dropdownTitle > *:hover,
+.dropdownTitle span:hover {
+    color: #7A1781;
+}
+
+.glyphicon-chevron-down {
+    position: relative;
+    top: 3px !important;
+    left: 10px;
+    font-size: 0.8em;
+}
+
+
+
+
+.dropdownOptions {
+    /* height: 0; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+
+
+
+    transition: all .5s ease-in-out;
+    transform-origin: left top;
+    transform: scaleY(0);
+}
+
+.dropdownOptions li {
+    /* font-size: 0.8rem; */
+    margin-top: 20px;
+    margin-left: 0;
+    list-style: none;
+}
+
+.dropdownOptions li a {
+    font-size: 1.5em;
+    font-weight: 400;
+
+}
+
+.dropdownOptions.activeDrop {
+    transform: scaleY(1);
+}
+
+
+
+
+@media(max-width: 1199px) {
+    .myNewHeader {
+        /* width: 220px; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .myNewHeader .row  {
+        display: flex;
+        align-items: center;
+    }
+
+    .busca input {
+        width: 15rem;
+    }
+
+
+}
+
+
+/* media query para cel */
+
+@media(max-width: 767px) {
+    .menu.superior {
+        display: none;
+    }
+
+    .logo {
+        /* height: 120px; */
+        width: 140px;
+    }
+    
+    .headerMenu {
+        display: block; 
+        justify-content: center;
+    }
+    
+    .userSvg,
+    .shopCartSvg {
+        display: none;
+    }
+
+    .busca {
+        width: 100%;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: 1rem;
+
+    }
+
+    .busca input {
+        display: block;
+        opacity: 1;
+        width: 60vw;
+
+        /* display: flex;
+        justify-content: flex-end; */
+    }
+
+    /* .headerMenu > * {
+        margin-right: 3rem;
+    } */
+
+    /*  .headerMenu p {
+        margin-left: 5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000;
+    } 
+
+    .headerMenuTitle {
+         display: block; 
+    }
+     .busca input {
+        display: block;
+        opacity: 1;
+    } 
+
+    .headerMenuSvg {
+         display: none; 
+    } */
+
+    /* hiding form-buscar */
+    #form-buscar {
+        position: absolute;
+    }
+
+    .acoes-produto-responsiva {
+        text-align: center;
+        /* justify-content: center; */
+    }
+
+    .info-produto {
+        margin-bottom: 0.5rem;
+    }
+
+    .acoes-produto-responsiva a {
+        background: none;
+
+    }
+
+    .acoes-produto-responsiva a span {
+        font-weight: bold;
+    }
+
+    .acoes-produto-responsiva a > *  {
+        color: #7A1781;
+    }
+
+    /* fora do site  */
+    .myNewHeader .row  {
+        display: block;
+    }
+
+    /* .busca input.inputActive {
+        display: none; 
+    } */
+
+    .sideNavButton {
+        display: block;
+    }
+}
+
+
+
+@media(max-width: 539px) {
+
+    /* já no site */
+
+    .acoes-produto-responsiva {
+        position: relative;
+    }
+
+    .desconto-a-vista {
+        display: none;
+    }
+
+    .preco-promocional {
+        font-size: 1rem !important;
+    }
+
+    .preco-parcela {
+        font-size: 0.8rem;
+    }
+
+    /* ainda não estão no site */
+
+
+    .headerMenu p {
+        margin-left: 2rem;
+    }
+
+    .headerMenu  {
+        margin-left: -1rem;
+    }
+
+}
+
+/* listagem dos produtos */
+
+
+
+

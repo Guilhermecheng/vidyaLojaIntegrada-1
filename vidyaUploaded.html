@@ -1,0 +1,186 @@
+<header>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="sideNavButton">&#9776;</span>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://vidyacloset.lojaintegrada.com.br/conta/index">Conta</a>
+        <a href="https://vidyacloset.lojaintegrada.com.br/carrinho/index">Carrinho</a>
+
+        <!-- <div class="dropdownMenu" onclick="dropDown()"> -->
+            <h3 class="dropdownTitle" onclick="dropDown()">Categorias <!--<i class="arrow-down"></i> --> <span class="glyphicon glyphicon-chevron-down"></span> </h3>
+        <!-- </div> -->
+        <ul class="dropdownOptions"  id="dropdownOnClick">
+            <li >
+                <a href="https://vidyacloset.lojaintegrada.com.br/blusa-13771185">Blusa</a>
+            </li>
+            <li>
+                <a href="https://vidyacloset.lojaintegrada.com.br/body-13771089">Body</a>
+            </li>
+            <li>
+                <a href="https://vidyacloset.lojaintegrada.com.br/calca-13771116">Calça</a>
+            </li>
+            <li>
+                <a href="https://vidyacloset.lojaintegrada.com.br/cropped-13771190">Cropped</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <section class="conteiner myNewHeader">
+        <div class="navigationBar">
+            <div class="row">
+                <div class="span3">
+                    <h1 class="logo">
+                        <a href="https://vidyacloset.lojaintegrada.com.br/" title="Vidya Closet">
+                            <img src="https://cdn.awsli.com.br/400x300/1953/1953716/logo/7f17bd3f23.png" alt="Vidya Closet">
+                        </a>
+                    </h1>            
+                </div>
+
+                <div class="span8 headerMenu">
+                    <form id="form-buscar" action="/buscar" method="get" class="busca">
+                        <input id="buscaInput" type="text" name="q" placeholder="Digite o que você procura" value="" autocomplete="off" class="ui-autocomplete-input">
+                        
+                        <a class="botaoBuscarSvg headerMenuSvg" id="botaoBuscar" onclick="inputBuscaToggle()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/>
+                            </svg>
+                        </a>
+                    </form>
+                    <!-- <p class="buscar headerMenuTitle">Buscar</p> -->
+
+                    <a class="userSvg headerMenuSvg" href="https://vidyacloset.lojaintegrada.com.br/conta/index">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </a>
+                    <!-- <p class="user headerMenuTitle">Conta</p> -->
+
+
+                    <a class="shopCartSvg headerMenuSvg" href="https://vidyacloset.lojaintegrada.com.br/carrinho/index">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    </a>
+                    <!-- <p class="shopCart headerMenuTitle">Carrinho</p> -->
+
+                </div>
+            </div>
+        
+            <div class="menu superior">
+                <ul class="nivel-um">            
+                    <li class="categoria-id-13771185  borda-principal">
+                        <a href="https://vidyacloset.lojaintegrada.com.br/blusa-13771185" title="Blusa">
+                            <strong class="titulo cor-secundaria">Blusa</strong>                    
+                        </a>             
+                    </li> 
+
+                    <li class="categoria-id-13771089  borda-principal">
+                        <a href="https://vidyacloset.lojaintegrada.com.br/body-13771089" title="Body">
+                            <strong class="titulo cor-secundaria">Body</strong>                    
+                        </a>                
+                    </li>
+                
+                    <li class="categoria-id-13771116  borda-principal">
+                        <a href="https://vidyacloset.lojaintegrada.com.br/calca-13771116" title="Calça">
+                            <strong class="titulo cor-secundaria">Calça</strong>
+                        </a>                
+                    </li>
+                
+                    <li class="categoria-id-13771190  borda-principal">
+                        <a href="https://vidyacloset.lojaintegrada.com.br/cropped-13771190" title="Cropped">
+                            <strong class="titulo cor-secundaria">Cropped</strong>                    
+                        </a>                
+                    </li>            
+                </ul>
+            </div>     
+        </div>
+    </section>
+</header>
+
+
+
+<!-- Parte que vai no inferior da página -->
+<script>
+    let carrinho = document.querySelectorAll(".carrinho-interno ul li");
+    let contagem = carrinho.length;
+    
+    let teste = document.querySelectorAll('.botao-comprar').href;
+
+    // função para remover elementos desnecessários
+    function removeElements(element) {
+        var elements = element.length;
+    
+        for(var i = 0; i < elements; i++) {
+            $(element[i]).remove();
+        }
+    }
+    
+    $(document).ready(function() {
+        removeElements(
+            // elementos a serem removidos
+            // ['.barra-inicial','#cabecalho', '#barraTopo', '.esquerda', '.institucional' ]
+            ['#delimitadorBarra' , '#barraTopo', '.barra-inicial', '.titulo-categoria', '.newsletter', '#cabecalho']
+        )
+    })
+    
+    // menu ativo
+    var currentLocation = window.location.href;
+    var id = currentLocation.match(/([\d]+)/g);
+    if(id) {
+        console.log(id)
+        $(document).ready(function() {
+            $(`.categoria-id-${id}`).addClass("active")
+        })
+    }
+    
+    // função para input da busca
+    function inputBuscaToggle() {
+        
+        if($("#buscaInput").hasClass("inputActive")) {
+            $("#buscaInput").removeClass("inputActive")
+        } else {
+            $("#buscaInput").addClass("inputActive")
+        }
+    }
+    
+    
+    // sidenav functions
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+    }
+      
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    
+    // sidenav drop function
+    function dropDown() {
+        document.getElementById('dropdownOnClick').classList.toggle('activeDrop');
+    }
+
+
+    // funcao para botao de comprar
+    let skuDoProduto = $('span [itemprop="sku"]')[0].innerText;
+    let skuProdConfere = $('span [itemprop="sku"]').length;
+
+    if(skuDoProduto && skuProdConfere === 1) {
+        $('.atributo-item').click(function(e) {
+            let variacaoIdItem = $(e.currentTarget).attr('data-variacao-id');
+            let variacaoIdItemNum = Number(variacaoIdItem);
+        
+            let botoesLista = document.querySelectorAll(`div[class^='SKU-${skuDoProduto}'], div[class*='SKU-${skuDoProduto}']`);
+            for(var i = 0; i < botoesLista.length; i++) {
+                let variacaoDoItem = Number(botoesLista[i].attributes["data-variacao-id"].value);
+                if(variacaoDoItem === variacaoIdItemNum) {
+                    $(botoesLista[i]).removeClass("hide");
+                } else {
+                    $(botoesLista[i]).addClass("hide");
+                }
+            }
+        });
+    }
+    
+</script>
